@@ -5,15 +5,17 @@
  */
 function calculateRentalCost(days) {
   const price = 40;
-  const priceSevenDaySales = 50;
-  const priceThreeDaySales = 20;
+  const SEVEN_DAY_DISCOUNT = 50;
+  const TRHEE_DAY_DISCOUNT = 20;
+  const NUMBER_OF_DAYS_SEVEN = 7;
+  const NUMBER_OF_DAYS_THREE = 3;
 
-  if (days >= 7) {
-    return days * price - priceSevenDaySales;
+  if (days >= NUMBER_OF_DAYS_SEVEN) {
+    return days * price - SEVEN_DAY_DISCOUNT;
   }
 
-  if (days >= 3) {
-    return days * price - priceThreeDaySales;
+  if (days >= NUMBER_OF_DAYS_THREE) {
+    return days * price - TRHEE_DAY_DISCOUNT;
   }
 
   return days * price;
